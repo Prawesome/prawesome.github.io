@@ -50,6 +50,7 @@ for (var i = 0; i < elements.length; i++) {
         new TxtType(elements[i], JSON.parse(toRotate), period);
     }
 }
+
 // INJECT CSS FOR TYPING ANIMATION
 var css = document.createElement("style");
 css.type = "text/css";
