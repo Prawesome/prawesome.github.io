@@ -8,11 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+    <link rel="stylesheet" href="./node_modules/aos/dist/aos.css" />
+    <script src="node_modules/aos/dist/aos.js"></script>
 </head>
 
 <body>
     <section id="screen-1">
-        <div class="typewrite" data-period="2000" data-type='[ "Hey! I am Prejith"]'>
+        <div class="typewrite" data-period="2000" data-type='[ "Hey! I am Prejith", "Welcome to my portfolio"]'>
             <span class="wrap"></span>
         </div>
         <a href="#screen-2">
@@ -20,17 +22,17 @@
     </section>
 
     <section id="screen-2">
-        <h1>Who I am</h1>
-        <img class="profile-image" src="./img/profile.jpg" alt="Profile picture">
-        <div class="info-container profile-info">
+        <h1 data-aos="slide-right" data-aos-delay="300" data-aos-duration="700" >Who I am</h1>
+        <img data-aos="slide-left" data-aos-delay="300" class="profile-image" src="./img/profile.jpg" alt="Profile picture">
+        <div data-aos="zoom-in" data-aos-delay="700" class="info-container profile-info">
             Aspiring engineer. Developer. Open Source Enthusiast. Avid Learner
         </div>
-        <div class="resume-container resume">
+        <div data-aos="zoom-in" data-aos-delay="700" class="resume-container resume">
             <a href="#">Resume</a>
         </div>
     </section>
 
-    <footer>Designed from scratch with &hearts;	by Prejith Premkumar</footer>
+    <footer>Developed and Designed from scratch with &hearts; by Prejith Premkumar</footer>
 
     <span class="contact">CONTACT</span>
     <div class="contact-popup-outter">
@@ -80,6 +82,9 @@
     </div>
 
     <script src="js/app.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
