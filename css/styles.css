@@ -30,6 +30,7 @@ section {
     position: relative;
     color: #fff;
     vertical-align: true;
+    z-index: -1;
 }
 
 #screen-1 {
@@ -57,7 +58,7 @@ section {
     right: 0;
     width: 40vw;
     height: 100vh;
-    z-index: 0;
+    z-index: -1;
 }
 
 /* Styling for description text */
@@ -116,7 +117,7 @@ section {
  
 ::-webkit-scrollbar-thumb {
   background-color: darkgrey;
-  /* outline: 1px solid slategrey; */
+  outline: 1px solid slategrey;
   border: 1px solid slategrey;
   border-radius: 10%;
 }
