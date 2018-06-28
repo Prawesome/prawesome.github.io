@@ -16,6 +16,8 @@
 body {
     color: #fff;
     font-family: "Maven-Modern", sans-serif;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 /*
@@ -31,7 +33,7 @@ section {
 }
 
 #screen-1 {
-    background: #363636;    
+    background: #363636;
 }
 
 #screen-2 {
@@ -39,6 +41,7 @@ section {
 }
 
 #screen-2 h1 {
+    padding-top: 0.3em;
     letter-spacing: 0.3em;
     font-size: 5em;
     text-align: center;
@@ -46,18 +49,22 @@ section {
     z-index: 1;
 }
 
+/* Hero image styling */
+
 .profile-image {
     position: absolute;
-    top:0;
+    top: 0;
     right: 0;
-    width: 40%;
-    height: 100%;
+    width: 40vw;
+    height: 100vh;
     z-index: 0;
 }
 
-.text-container {
+/* Styling for description text */
+
+.info-container {
     background: rgb(77, 77, 77);
-    border: 1.5px solid rgba(255, 255, 255, 1); 
+    border: 1.5px solid rgba(255, 255, 255, 1);
     padding: 3%;
     letter-spacing: 0.1em;
     font-size: 1.2em;
@@ -66,10 +73,36 @@ section {
 .profile-info {
     color: #fff;
     position: relative;
-    left: 15vw;
-    top: 40vh;
+    left: 12vw;
+    top: 15vh;
     width: 30vw;
 }
+
+/* Styling for resume text */
+
+.resume-container {
+    letter-spacing: 0.1em;
+    font-size: 1.8em;
+}
+
+.resume {
+    position: relative;
+    left: 25vw;
+    top: 40vh;
+    width: 25vw;
+}
+
+.resume a {
+    text-decoration: none;
+    color: #fff;
+    transition: box-shadow 0.3s linear;
+    padding: 0.5em;
+}
+
+.resume a:hover {
+    box-shadow: 2px 0px #fff;
+}
+
 
 /*  
 *   Typewriting animation in screen 1
@@ -91,6 +124,7 @@ section {
 #screen-1 a {
     position: absolute;
     bottom: 20px;
+    margin-left: -2.5%;
     left: 50%;
     z-index: 2;
     display: inline-block;
@@ -124,30 +158,32 @@ section {
     animation: sdb06 1.5s infinite;
     box-sizing: border-box;
 }
+
 @-webkit-keyframes sdb06 {
     0% {
-      -webkit-transform: rotateY(0) rotateZ(-45deg) translate(0, 0);
-      opacity: 0;
+        -webkit-transform: rotateY(0) rotateZ(-45deg) translate(0, 0);
+        opacity: 0;
     }
     50% {
-      opacity: 1;
+        opacity: 1;
     }
     100% {
-      -webkit-transform: rotateY(720deg) rotateZ(-45deg) translate(-20px, 20px);
-      opacity: 0;
+        -webkit-transform: rotateY(720deg) rotateZ(-45deg) translate(-20px, 20px);
+        opacity: 0;
     }
-  }
+}
+
 @keyframes sdb06 {
     0% {
-      transform: rotateY(0) rotateZ(-45deg) translate(0, 0);
-      opacity: 0;
+        transform: rotateY(0) rotateZ(-45deg) translate(0, 0);
+        opacity: 0;
     }
     50% {
-      opacity: 1;
+        opacity: 1;
     }
     100% {
-      transform: rotateY(720deg) rotateZ(-45deg) translate(-20px, 20px);
-      opacity: 0;
+        transform: rotateY(720deg) rotateZ(-45deg) translate(-20px, 20px);
+        opacity: 0;
     }
 }
 
@@ -162,10 +198,10 @@ section {
     bottom: 10vh;
     padding-left: 0.5em;
     padding-right: 0.25em;
-    writing-mode:tb-rl;
+    writing-mode: tb-rl;
     letter-spacing: 0.1em;
-    white-space:nowrap;
-    display:inline;
+    white-space: nowrap;
+    display: inline;
     outline: none;
     transition: box-shadow 0.3s linear;
     font-family: 'Maven-Modern', sans-serif;
@@ -185,7 +221,7 @@ section {
     background: #fff;
     width: 100%;
     height: 40%;
-    opacity: 0.2;
+    opacity: 0.4;
 }
 
 .close-cross {
@@ -226,7 +262,7 @@ section {
 #git-icon,
 #linkedin-icon,
 #fb-icon {
-    fill:#4f4f4f;
+    fill: #4f4f4f;
     opacity: 1;
 }
 
@@ -235,7 +271,7 @@ svg:hover #git-icon {
 }
 
 svg:hover #fb-icon {
-    fill:#3B5998;
+    fill: #3B5998;
 }
 
 svg:hover #linkedin-icon {
