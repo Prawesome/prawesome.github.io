@@ -125,10 +125,10 @@ const section2 = document.querySelector('#screen-2');
 window.addEventListener('scroll', function() {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     if(scrollTop < section2.getBoundingClientRect().top) {
-        removeClass(body, 'green-background');
-        addClass(body, 'orange-background');
+        removeClass(body, 'section-2-background');
+        addClass(body, 'section-1-background');
     } else {
-        removeClass(body, 'orange-background');
-        addClass(body, 'green-background');
+        removeClass(body, 'section-1-background');
+        addClass(body, 'section-2-background');
     }
 });

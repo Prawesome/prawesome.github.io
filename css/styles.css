@@ -18,7 +18,7 @@ body {
     font-family: "Maven-Modern", sans-serif;
     overflow-y: scroll;
     overflow-x: hidden;
-    background-color: #ffd42d;
+    background-color: #ff5851;
 }
 
 /*
@@ -34,12 +34,12 @@ section {
     z-index: 0;
 }
 
-.orange-background {
-    background-color: #ffd42d;
-    transition: background-color 2s ease-in;
+.section-1-background {
+    background-color: #ff5851;
+    transition: background-color 1s ease-in;
 }   
 
-.green-background {
+.section-2-background {
     background-color: #3fc380;
 }
 
@@ -61,16 +61,29 @@ section {
     width: 40vw;
     height: 100vh;
     z-index: -1;
+    opacity: 0.6;
+}
+
+.overlay {
+    background-color: #3fc380;
+    z-index: -1;
+    width: 40vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 /* Styling for description text */
 
 .info-container {
-    background: rgb(77, 77, 77);
+    background: #2f9160;
     border: 1.5px solid rgba(255, 255, 255, 1);
     padding: 3%;
     letter-spacing: 0.1em;
     font-size: 1.2em;
+    -webkit-box-shadow: 0 0 5px #000000;
+    box-shadow: 0 0 5px #000000;
 }
 
 .profile-info {
@@ -185,12 +198,12 @@ footer {
     border-bottom: 1px solid #fff;
     -webkit-transform: rotateZ(-45deg);
     transform: rotateZ(-45deg);
-    -webkit-animation: sdb06 1.5s infinite;
-    animation: sdb06 1.5s infinite;
+    -webkit-animation: sdb 1.5s infinite;
+    animation: sdb 1.5s infinite;
     box-sizing: border-box;
 }
 
-@-webkit-keyframes sdb06 {
+@-webkit-keyframes sdb {
     0% {
         -webkit-transform: rotateY(0) rotateZ(-45deg) translate(0, 0);
         opacity: 0;
@@ -204,7 +217,7 @@ footer {
     }
 }
 
-@keyframes sdb06 {
+@keyframes sdb {
     0% {
         transform: rotateY(0) rotateZ(-45deg) translate(0, 0);
         opacity: 0;
