@@ -119,3 +119,16 @@ document.querySelector('#screen-2-link').addEventListener('click', function (eve
         behavior: 'smooth'
     });
 });
+
+const body = document.querySelector('body');
+const section2 = document.querySelector('#screen-2');
+window.addEventListener('scroll', function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if(scrollTop < section2.getBoundingClientRect().top) {
+        removeClass(body, 'green-background');
+        addClass(body, 'orange-background');
+    } else {
+        removeClass(body, 'orange-background');
+        addClass(body, 'green-background');
+    }
+});
