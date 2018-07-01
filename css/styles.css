@@ -21,6 +21,11 @@ body {
   background-color: #ff5851;
 }
 
+.title-text {
+    text-align: center;
+    font-size: 6em;
+    font-family: 'Maven-Modern-Strong'
+}
 
 /*
 * Section styling
@@ -354,8 +359,36 @@ svg:hover #linkedin-icon {
     }
 }
 
-@media (min-width: 320px) and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 767px) {
     .typewrite { 
         font-size: 2em;
+    }
+
+    .resume {
+        top: 20vh;
+        left: 38vw;
+        font-size: 1.5em;
+    }
+
+    .resume a {
+        padding: 0.2em;
+    }
+
+    .profile-info {
+        top: 10vh;
+        left: 22vw;
+        width: 50vw;
+    }
+
+    .profile-image {
+        display: none;
+    }
+
+    .overlay {
+        display: none;
+    }
+    
+    .title-text {
+        font-size: 5em;
     }
 }
