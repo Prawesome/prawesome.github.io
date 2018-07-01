@@ -78,8 +78,8 @@ section {
 
 .info-container {
   background: #0f96eb;
-  border: 1.5px solid rgba(255, 255, 255, 1);
-  padding: 3%;
+  border: 0.1em solid rgba(255, 255, 255, 1);
+  padding: 5vh 5vw 5vh 5vw;
   letter-spacing: 0.1em;
   font-size: 1.2em;
   -webkit-box-shadow: 0 0 5px #000000;
@@ -89,9 +89,10 @@ section {
 .profile-info {
   color: #fff;
   position: relative;
-  left: 12vw;
-  top: 15vh;
+  left: 15vw;
+  top: 8vh;
   width: 30vw;
+  text-align: center;
 }
 
 /* Styling for resume text */
@@ -103,9 +104,10 @@ section {
 
 .resume {
   position: relative;
-  left: 25vw;
+  left: 27vw;
   top: 40vh;
   width: 25vw;
+  font-family: "Maven-Modern-Strong"
 }
 
 .resume a {
@@ -140,11 +142,11 @@ section {
 /* Footer */
 
 footer {
-  background-color: #131313;
+  background-color: #40424a;
   color: #fff;
   text-align: center;
-  padding-top: 0.3em;
-  padding-bottom: 0.3em;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
 }
 
 /*  
@@ -158,76 +160,6 @@ footer {
   font-size: 6em;
   font-family: "Maven-Modern", sans-serif;
   height: 70vh;
-}
-
-/* 
-*   Scroll-down button
-*/
-
-#screen-1 a {
-  position: absolute;
-  bottom: 20px;
-  margin-left: -2.5%;
-  left: 50%;
-  z-index: 2;
-  display: inline-block;
-  -webkit-transform: translate(0, -50%);
-  transform: translate(0, -50%);
-  color: #fff;
-  letter-spacing: 0.1em;
-  text-decoration: none;
-  transition: opacity 0.3s;
-  text-align: center;
-  padding-top: 70px;
-  font-family: "Maven-Modern-Strong", sans-serif;
-}
-
-#screen-1 a:hover {
-  opacity: 0.5;
-}
-
-#screen-1 a span {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 24px;
-  height: 24px;
-  margin-left: -12px;
-  border-left: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  -webkit-transform: rotateZ(-45deg);
-  transform: rotateZ(-45deg);
-  -webkit-animation: sdb 1.5s infinite;
-  animation: sdb 1.5s infinite;
-  box-sizing: border-box;
-}
-
-@-webkit-keyframes sdb {
-  0% {
-    -webkit-transform: rotateY(0) rotateZ(-45deg) translate(0, 0);
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: rotateY(720deg) rotateZ(-45deg) translate(-20px, 20px);
-    opacity: 0;
-  }
-}
-
-@keyframes sdb {
-  0% {
-    transform: rotateY(0) rotateZ(-45deg) translate(0, 0);
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    transform: rotateY(720deg) rotateZ(-45deg) translate(-20px, 20px);
-    opacity: 0;
-  }
 }
 
 /*
@@ -247,7 +179,7 @@ footer {
   display: inline;
   outline: none;
   transition: box-shadow 0.3s linear;
-  font-family: "Maven-Modern", sans-serif;
+  font-family: "Maven-Modern-Strong", sans-serif;
 }
 
 .contact:hover {
@@ -320,3 +252,75 @@ svg:hover #fb-icon {
 svg:hover #linkedin-icon {
   fill: #007ab9;
 }
+
+
+/* 
+*   Scroll-down button
+*/
+
+#screen-1 a {
+    position: absolute;
+    bottom: 20px;
+    margin-left: -2.5%;
+    left: 50%;
+    z-index: 2;
+    display: inline-block;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    color: #fff;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    transition: opacity 0.3s;
+    text-align: center;
+    padding-top: 70px;
+    font-family: "Maven-Modern-Strong", sans-serif;
+  }
+  
+  #screen-1 a:hover {
+    opacity: 0.5;
+  }
+  
+  #screen-1 a span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: rotateZ(-45deg);
+    transform: rotateZ(-45deg);
+    -webkit-animation: sdb 1.5s infinite;
+    animation: sdb 1.5s infinite;
+    box-sizing: border-box;
+  }
+  
+  @-webkit-keyframes sdb {
+    0% {
+      -webkit-transform: rotateY(0) rotateZ(-45deg) translate(0, 0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: rotateY(720deg) rotateZ(-45deg) translate(-20px, 20px);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes sdb {
+    0% {
+      transform: rotateY(0) rotateZ(-45deg) translate(0, 0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotateY(720deg) rotateZ(-45deg) translate(-20px, 20px);
+      opacity: 0;
+    }
+  }
+  
