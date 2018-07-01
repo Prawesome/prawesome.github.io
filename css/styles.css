@@ -95,6 +95,15 @@ section {
   text-align: center;
 }
 
+.strong-text {
+    font-family: "Maven-Modern-Strong";
+    font-size: 1.2em;
+}
+
+.skill-text {
+    margin: 0.3em 0.3em 0.3em 0.3em;
+}
+
 /* Styling for resume text */
 
 .resume-container {
