@@ -79,7 +79,7 @@ section {
 .info-container {
   background: #0f96eb;
   border: 0.1em solid rgba(255, 255, 255, 1);
-  padding: 5vh 5vw 5vh 5vw;
+  padding: 5vh 3vw 5vh 3vw;
   letter-spacing: 0.1em;
   font-size: 1.2em;
   -webkit-box-shadow: 0 0 5px #000000;
@@ -89,7 +89,7 @@ section {
 .profile-info {
   color: #fff;
   position: relative;
-  left: 15vw;
+  left: 14vw;
   top: 8vh;
   width: 30vw;
   text-align: center;
@@ -101,7 +101,7 @@ section {
 }
 
 .skill-text {
-    margin: 0.3em 0.3em 0.3em 0.3em;
+    margin: 1em 1em 1em 1em;
 }
 
 /* Styling for resume text */
