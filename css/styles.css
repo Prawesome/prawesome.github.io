@@ -52,11 +52,12 @@ section {
 }
 
 .section-1-background {
-  background-color: #ff5851;
   transition: background-color 1s ease-in;
+  background-color: #ff5851;
 }
 
 .section-2-background {
+  transition: background-color 1s ease-in;
   background-color: #0f96eb
 }
 
@@ -417,6 +418,7 @@ svg:hover #linkedin-icon {
 	height: 100%;
 	position: relative;
 }
+
 #loading-center-absolute {
 	position: absolute;
 	left: 50%;
