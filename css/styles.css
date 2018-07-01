@@ -27,6 +27,17 @@ body {
     font-family: 'Maven-Modern-Strong'
 }
 
+.hero-image-container {
+  display: none;
+}
+
+.hero-image {
+  height: 10em;
+  width: 10em;
+  border-radius: 50%;
+  border: 5px solid white;
+}
+
 /*
 * Section styling
 */
@@ -362,6 +373,7 @@ svg:hover #linkedin-icon {
 @media (min-width: 320px) and (max-width: 767px) {
     .typewrite { 
         font-size: 2em;
+        height: 50vh;
     }
 
     .resume {
@@ -390,5 +402,13 @@ svg:hover #linkedin-icon {
     
     .title-text {
         font-size: 5em;
+    }
+
+    .hero-image-container {
+      top:0;
+      left: 0;
+      display: block;
+      text-align: center;
+      margin-top: 5vh;
     }
 }
