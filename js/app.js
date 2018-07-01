@@ -70,7 +70,7 @@ function fadeIn(el, duration, display) {
     s.opacity = s.opacity || 0;
     s.display = display || "block";
     (function fade() {
-        (s.opacity = parseFloat(s.opacity) + step) > 0.6 ? s.opacity = 0.6 : setTimeout(fade, 25);
+        (s.opacity = parseFloat(s.opacity) + step) > 0.85 ? s.opacity = 0.85 : setTimeout(fade, 25);
     })();
 }
 
@@ -102,18 +102,18 @@ function removeClass(el, className) {
 let contact = document.querySelector('.contact');
 let contactPopup = document.querySelector('.contact-popup-outter');
 contact.addEventListener('click', function () {
-    fadeIn(contactPopup, 1000, 'flex');
+    fadeIn(contactPopup, 800, 'flex');
 });
 
 let cross = document.querySelector('.close-cross');
 cross.addEventListener('click', function () {
-    fadeOut(contactPopup, 1000);
+    fadeOut(contactPopup, 800);
 });
 
 document.addEventListener('keyup', function (evt) {
     evt = evt || window.event;
     if (evt.keyCode === 27) {
-        fadeOut(contactPopup, 1000);
+        fadeOut(contactPopup, 800);
     }
 });
 

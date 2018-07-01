@@ -221,16 +221,19 @@ footer {
   flex-direction: column;
   justify-content: center;
   background: #fff;
-  width: 100%;
+  width: 90%;
   height: 40%;
   opacity: 1;
+  margin: 0 5vw;
 }
 
 .close-cross {
   position: absolute;
-  top: 1vh;
-  right: 1vw;
+  top: 2vh;
+  right: 2vw;
+  padding: 1.5vh 1.5vw;
   color: #000000;
+  font-size: 1.5em;
   font-family: "Maven-Modern-Strong";
   opacity: 1;
   cursor: pointer;
@@ -239,11 +242,15 @@ footer {
 .mail-container {
   text-align: center;
   display: block;
-  color: #000000;
   opacity: 1;
-  margin-bottom: 1.5em;
+  margin-bottom: 5vh;
   font-family: "Maven-Modern-Strong";
   font-size: 1.5em;
+}
+
+.mail-container a {
+  text-decoration: none;
+  color: #000000;
 }
 
 .intro-contact-container {
@@ -261,22 +268,20 @@ footer {
   align-items: center;
 }
 
-#git-icon,
-#linkedin-icon,
-#fb-icon {
+svg:hover {
   fill: #4f4f4f;
   opacity: 1;
 }
 
-svg:hover #git-icon {
+#git-icon {
   fill: #000000;
 }
 
-svg:hover #fb-icon {
+#fb-icon {
   fill: #3b5998;
 }
 
-svg:hover #linkedin-icon {
+ #linkedin-icon {
   fill: #007ab9;
 }
 
@@ -404,7 +409,7 @@ svg:hover #linkedin-icon {
 }
 
 #loading {
-  background-color: #bd4932;
+  background-color: #ff5851;
   height: 100%;
   width: 100%;
   position: fixed;
