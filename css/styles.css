@@ -176,6 +176,11 @@ footer {
   padding-bottom: 1vh;
 }
 
+.footer-name {
+  color: #ffa6b8;
+}
+
+
 /*  
 *   Typewriting animation in screen 1
 */
@@ -220,6 +225,7 @@ footer {
   display: none;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   background: #fff;
   width: 90%;
   height: 40%;
@@ -268,9 +274,10 @@ footer {
   align-items: center;
 }
 
-svg:hover {
-  fill: #4f4f4f;
-  opacity: 1;
+.social-icon {
+  margin: 0vh 2vw;
+  min-width: 3vw;
+  min-height: 3vh;
 }
 
 #git-icon {
@@ -281,8 +288,125 @@ svg:hover {
   fill: #3b5998;
 }
 
- #linkedin-icon {
+#linkedin-icon {
   fill: #007ab9;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .typewrite {
+    font-size: 4em;
+  }
+  .resume {
+    top: 25vh;
+    left: 26vw;
+    font-size: 1.5em;
+  }
+  .resume a {
+    padding: 0.2em;
+  }
+  .profile-info {
+    top: 10vh;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .typewrite {
+    font-size: 1.7em;
+    height: 50vh;
+  }
+  .resume {
+    top: 20vh;
+    left: 38vw;
+    font-size: 1.5em;
+  }
+  .resume a {
+    padding: 0.2em;
+  }
+  .profile-info {
+    top: 10vh;
+    left: 22vw;
+    width: 50vw;
+  }
+  .profile-image {
+    display: none;
+  }
+  .overlay {
+    display: none;
+  }
+  .title-text {
+    font-size: 5em;
+  }
+  .hero-image-container {
+    top: 0;
+    left: 0;
+    display: block;
+    text-align: center;
+    margin-top: 5vh;
+  }
+}
+
+#loading {
+  background-color: #ff5851;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  margin-top: 0px;
+  top: 0px;
+}
+
+#loading-center {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#loading-center-absolute {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 200px;
+  width: 200px;
+  margin-top: -100px;
+  margin-left: -100px;
+}
+
+#load-object {
+  width: 80px;
+  height: 80px;
+  background-color: #FFF;
+  -webkit-animation: animate 1s infinite ease-in-out;
+  animation: animate 1s infinite ease-in-out;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 60px;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: perspective(160px);
+  }
+  50% {
+    -webkit-transform: perspective(160px) rotateY(-180deg);
+  }
+  100% {
+    -webkit-transform: perspective(160px) rotateY(-180deg) rotateX(-180deg);
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: perspective(160px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(160px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(160px) rotateX(-180deg) rotateY(0deg);
+    -webkit-transform: perspective(160px) rotateX(-180deg) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(160px) rotateX(-180deg) rotateY(-180deg);
+    -webkit-transform: perspective(160px) rotateX(-180deg) rotateY(-180deg);
+  }
 }
 
 /* 
@@ -355,119 +479,53 @@ svg:hover {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-  .typewrite {
-    font-size: 4em;
-  }
-  .resume {
-    top: 25vh;
-    left: 26vw;
-    font-size: 1.5em;
-  }
-  .resume a {
-    padding: 0.2em;
-  }
-  .profile-info {
-    top: 10vh;
-  }
+/* Float shadow from hover.css */
+
+.hvr-float-shadow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
-  .typewrite {
-    font-size: 1.7em;
-    height: 50vh;
-  }
-  .resume {
-    top: 20vh;
-    left: 38vw;
-    font-size: 1.5em;
-  }
-  .resume a {
-    padding: 0.2em;
-  }
-  .profile-info {
-    top: 10vh;
-    left: 22vw;
-    width: 50vw;
-  }
-  .profile-image {
-    display: none;
-  }
-  .overlay {
-    display: none;
-  }
-  .title-text {
-    font-size: 5em;
-  }
-  .hero-image-container {
-    top: 0;
-    left: 0;
-    display: block;
-    text-align: center;
-    margin-top: 5vh;
-  }
+.hvr-float-shadow:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: '';
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+  /* W3C */
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform, opacity;
+  transition-property: transform, opacity;
 }
 
-#loading {
-  background-color: #ff5851;
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  z-index: 1;
-  margin-top: 0px;
-  top: 0px;
+.hvr-float-shadow:hover,
+.hvr-float-shadow:focus,
+.hvr-float-shadow:active {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+  /* move the element up by 5px */
 }
 
-#loading-center{
-	width: 100%;
-	height: 100%;
-	position: relative;
-}
-
-#loading-center-absolute {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	height: 200px;
-	width: 200px;
-	margin-top: -100px;
-	margin-left: -100px;
-}
-
-#load-object {
-  width: 80px;
-  height: 80px;
-  background-color: #FFF;
-  -webkit-animation: animate 1s infinite ease-in-out;
-  animation: animate 1s infinite ease-in-out;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 60px;
-}
-
-@-webkit-keyframes animate {
-  0% {
-    -webkit-transform: perspective(160px);
-  }
-  50% {
-    -webkit-transform: perspective(160px) rotateY(-180deg);
-  }
-  100% {
-    -webkit-transform: perspective(160px) rotateY(-180deg) rotateX(-180deg);
-  }
-}
-
-@keyframes animate {
-  0% {
-    transform: perspective(160px) rotateX(0deg) rotateY(0deg);
-    -webkit-transform: perspective(160px) rotateX(0deg) rotateY(0deg);
-  }
-  50% {
-    transform: perspective(160px) rotateX(-180deg) rotateY(0deg);
-    -webkit-transform: perspective(160px) rotateX(-180deg) rotateY(0deg);
-  }
-  100% {
-    transform: perspective(160px) rotateX(-180deg) rotateY(-180deg);
-    -webkit-transform: perspective(160px) rotateX(-180deg) rotateY(-180deg);
-  }
+.hvr-float-shadow:hover:before,
+.hvr-float-shadow:focus:before,
+.hvr-float-shadow:active:before {
+  opacity: 1;
+  -webkit-transform: translateY(5px);
+  transform: translateY(5px);
+  /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
 }
