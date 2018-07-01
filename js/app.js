@@ -1,3 +1,7 @@
+document.addEventListener('DOMContentLoaded', function() {
+    fadeOut(document.querySelector('#loading'), 100);
+})
+
 /* 
     Typing Animation from https://codepen.io/hi-im-si/pen/DHoup
 */

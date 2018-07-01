@@ -22,9 +22,9 @@ body {
 }
 
 .title-text {
-    text-align: center;
-    font-size: 6em;
-    font-family: 'Maven-Modern-Strong'
+  text-align: center;
+  font-size: 6em;
+  font-family: 'Maven-Modern-Strong'
 }
 
 .hero-image-container {
@@ -113,12 +113,12 @@ section {
 }
 
 .strong-text {
-    font-family: "Maven-Modern-Strong";
-    font-size: 1.2em;
+  font-family: "Maven-Modern-Strong";
+  font-size: 1.2em;
 }
 
 .skill-text {
-    margin: 1em 1em 1em 1em;
+  margin: 1em 1em 1em 1em;
 }
 
 /* Styling for resume text */
@@ -279,136 +279,188 @@ svg:hover #linkedin-icon {
   fill: #007ab9;
 }
 
-
 /* 
 *   Scroll-down button
 */
 
 #screen-1 a {
-    position: absolute;
-    bottom: 1vh;
-    margin-left: -3.5%;
-    left: 50%;
-    z-index: 2;
-    display: inline-block;
-    -webkit-transform: translate(0, -50%);
-    transform: translate(0, -50%);
-    color: #fff;
-    letter-spacing: 0.1em;
-    text-decoration: none;
-    transition: opacity 0.3s;
-    text-align: center;
-    padding-top: 4.5em;
-    font-family: "Maven-Modern-Strong", sans-serif;
+  position: absolute;
+  bottom: 1vh;
+  margin-left: -3.5%;
+  left: 50%;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  color: #fff;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  transition: opacity 0.3s;
+  text-align: center;
+  padding-top: 4.5em;
+  font-family: "Maven-Modern-Strong", sans-serif;
+}
+
+#screen-1 a:hover {
+  opacity: 0.5;
+}
+
+#screen-1 a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2em;
+  height: 2em;
+  margin-left: -1em;
+  border-left: 0.1em solid #fff;
+  border-bottom: 0.1em solid #fff;
+  -webkit-transform: rotateZ(-45deg);
+  transform: rotateZ(-45deg);
+  -webkit-animation: sdb 1.5s infinite;
+  animation: sdb 1.5s infinite;
+  box-sizing: border-box;
+}
+
+@-webkit-keyframes sdb {
+  0% {
+    -webkit-transform: rotateY(0) rotateZ(-45deg) translate(0, 0);
+    opacity: 0;
   }
-  
-  #screen-1 a:hover {
-    opacity: 0.5;
+  50% {
+    opacity: 1;
   }
-  
-  #screen-1 a span {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 2em;
-    height: 2em;
-    margin-left: -1em;
-    border-left: 0.1em solid #fff;
-    border-bottom: 0.1em solid #fff;
-    -webkit-transform: rotateZ(-45deg);
-    transform: rotateZ(-45deg);
-    -webkit-animation: sdb 1.5s infinite;
-    animation: sdb 1.5s infinite;
-    box-sizing: border-box;
+  100% {
+    -webkit-transform: rotateY(720deg) rotateZ(-45deg) translate(-20px, 20px);
+    opacity: 0;
   }
-  
-  @-webkit-keyframes sdb {
-    0% {
-      -webkit-transform: rotateY(0) rotateZ(-45deg) translate(0, 0);
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      -webkit-transform: rotateY(720deg) rotateZ(-45deg) translate(-20px, 20px);
-      opacity: 0;
-    }
+}
+
+@keyframes sdb {
+  0% {
+    transform: rotateY(0) rotateZ(-45deg) translate(0, 0);
+    opacity: 0;
   }
-  
-  @keyframes sdb {
-    0% {
-      transform: rotateY(0) rotateZ(-45deg) translate(0, 0);
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      transform: rotateY(720deg) rotateZ(-45deg) translate(-20px, 20px);
-      opacity: 0;
-    }
+  50% {
+    opacity: 1;
   }
-  
+  100% {
+    transform: rotateY(720deg) rotateZ(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 1024px) {
-    .typewrite {
-        font-size: 4em;
-    }
-
-    .resume {
-        top: 25vh;
-        left: 26vw;
-        font-size: 1.5em;
-    }
-
-    .resume a {
-        padding: 0.2em;
-    }
-
-    .profile-info {
-        top: 10vh;
-    }
+  .typewrite {
+    font-size: 4em;
+  }
+  .resume {
+    top: 25vh;
+    left: 26vw;
+    font-size: 1.5em;
+  }
+  .resume a {
+    padding: 0.2em;
+  }
+  .profile-info {
+    top: 10vh;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
-    .typewrite { 
-        font-size: 2em;
-        height: 50vh;
-    }
+  .typewrite {
+    font-size: 1.7em;
+    height: 50vh;
+  }
+  .resume {
+    top: 20vh;
+    left: 38vw;
+    font-size: 1.5em;
+  }
+  .resume a {
+    padding: 0.2em;
+  }
+  .profile-info {
+    top: 10vh;
+    left: 22vw;
+    width: 50vw;
+  }
+  .profile-image {
+    display: none;
+  }
+  .overlay {
+    display: none;
+  }
+  .title-text {
+    font-size: 5em;
+  }
+  .hero-image-container {
+    top: 0;
+    left: 0;
+    display: block;
+    text-align: center;
+    margin-top: 5vh;
+  }
+}
 
-    .resume {
-        top: 20vh;
-        left: 38vw;
-        font-size: 1.5em;
-    }
+#loading {
+  background-color: #bd4932;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  margin-top: 0px;
+  top: 0px;
+}
 
-    .resume a {
-        padding: 0.2em;
-    }
+#loading-center{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+#loading-center-absolute {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	height: 200px;
+	width: 200px;
+	margin-top: -100px;
+	margin-left: -100px;
+}
 
-    .profile-info {
-        top: 10vh;
-        left: 22vw;
-        width: 50vw;
-    }
+#load-object {
+  width: 80px;
+  height: 80px;
+  background-color: #FFF;
+  -webkit-animation: animate 1s infinite ease-in-out;
+  animation: animate 1s infinite ease-in-out;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 60px;
+}
 
-    .profile-image {
-        display: none;
-    }
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: perspective(160px);
+  }
+  50% {
+    -webkit-transform: perspective(160px) rotateY(-180deg);
+  }
+  100% {
+    -webkit-transform: perspective(160px) rotateY(-180deg) rotateX(-180deg);
+  }
+}
 
-    .overlay {
-        display: none;
-    }
-    
-    .title-text {
-        font-size: 5em;
-    }
-
-    .hero-image-container {
-      top:0;
-      left: 0;
-      display: block;
-      text-align: center;
-      margin-top: 5vh;
-    }
+@keyframes animate {
+  0% {
+    transform: perspective(160px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(160px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(160px) rotateX(-180deg) rotateY(0deg);
+    -webkit-transform: perspective(160px) rotateX(-180deg) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(160px) rotateX(-180deg) rotateY(-180deg);
+    -webkit-transform: perspective(160px) rotateX(-180deg) rotateY(-180deg);
+  }
 }
