@@ -56,7 +56,7 @@ for (var i = 0; i < elements.length; i++) {
 // INJECT CSS FOR TYPING ANIMATION
 var css = document.createElement("style");
 css.type = "text/css";
-css.innerHTML = ".typewrite > .wrap { border-right: 0.05em solid #fff}";
+css.innerHTML = ".typewrite > .wrap { border-right: 0.03em solid #fff}";
 document.body.appendChild(css);
 
 //Custom fadeIn function other than the one provided by jQuery, taken from StackOverflow

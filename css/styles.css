@@ -21,6 +21,7 @@ body {
   background-color: #ff5851;
 }
 
+
 /*
 * Section styling
 */
@@ -168,9 +169,16 @@ footer {
   align-items: center;
   font-size: 6em;
   font-family: "Maven-Modern", sans-serif;
-  height: 70vh;
+  height: 80vh;
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+    .typewrite {
+        font-size: 4em
+    }
+
+
+}
 /*
 *   Contact popup
 */
@@ -269,7 +277,7 @@ svg:hover #linkedin-icon {
 
 #screen-1 a {
     position: absolute;
-    bottom: 20px;
+    bottom: 1vh;
     margin-left: -2.5%;
     left: 50%;
     z-index: 2;
@@ -281,7 +289,7 @@ svg:hover #linkedin-icon {
     text-decoration: none;
     transition: opacity 0.3s;
     text-align: center;
-    padding-top: 70px;
+    padding-top: 4.5em;
     font-family: "Maven-Modern-Strong", sans-serif;
   }
   
@@ -293,11 +301,11 @@ svg:hover #linkedin-icon {
     position: absolute;
     top: 0;
     left: 50%;
-    width: 24px;
-    height: 24px;
-    margin-left: -12px;
-    border-left: 1px solid #fff;
-    border-bottom: 1px solid #fff;
+    width: 2em;
+    height: 2em;
+    margin-left: -1em;
+    border-left: 0.1em solid #fff;
+    border-bottom: 0.1em solid #fff;
     -webkit-transform: rotateZ(-45deg);
     transform: rotateZ(-45deg);
     -webkit-animation: sdb 1.5s infinite;
