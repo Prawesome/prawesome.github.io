@@ -90,8 +90,8 @@ section {
 .profile-info {
   color: #fff;
   position: relative;
-  left: 14vw;
-  top: 8vh;
+  left: 16vw;
+  top: 14vh;
   width: 30vw;
   text-align: center;
 }
@@ -114,8 +114,8 @@ section {
 
 .resume {
   position: relative;
-  left: 27vw;
-  top: 40vh;
+  left: 30vw;
+  top: 35vh;
   width: 25vw;
   font-family: "Maven-Modern-Strong"
 }
@@ -172,13 +172,6 @@ footer {
   height: 80vh;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-    .typewrite {
-        font-size: 4em
-    }
-
-
-}
 /*
 *   Contact popup
 */
@@ -187,7 +180,7 @@ footer {
   cursor: pointer;
   position: fixed;
   left: 0;
-  bottom: 10vh;
+  bottom: 20vh;
   padding-left: 0.5em;
   padding-right: 0.25em;
   writing-mode: tb-rl;
@@ -278,7 +271,7 @@ svg:hover #linkedin-icon {
 #screen-1 a {
     position: absolute;
     bottom: 1vh;
-    margin-left: -2.5%;
+    margin-left: -3.5%;
     left: 50%;
     z-index: 2;
     display: inline-block;
@@ -341,3 +334,28 @@ svg:hover #linkedin-icon {
     }
   }
   
+@media (min-width: 768px) and (max-width: 1024px) {
+    .typewrite {
+        font-size: 4em;
+    }
+
+    .resume {
+        top: 25vh;
+        left: 26vw;
+        font-size: 1.5em;
+    }
+
+    .resume a {
+        padding: 0.2em;
+    }
+
+    .profile-info {
+        top: 10vh;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .typewrite { 
+        font-size: 2em;
+    }
+}
