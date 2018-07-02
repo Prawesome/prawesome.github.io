@@ -99,13 +99,13 @@ function removeClass(el, className) {
     else el.className = el.className.replace(new RegExp('\\b' + className + '\\b', 'g'), '');
 }
 
-let contact = document.querySelector('.contact');
-let contactPopup = document.querySelector('.contact-popup-outter');
+var contact = document.querySelector('.contact');
+var contactPopup = document.querySelector('.contact-popup-outter');
 contact.addEventListener('click', function () {
     fadeIn(contactPopup, 800, 'flex');
 });
 
-let cross = document.querySelector('.close-cross');
+var cross = document.querySelector('.close-cross');
 cross.addEventListener('click', function () {
     fadeOut(contactPopup, 800);
 });
@@ -124,10 +124,10 @@ document.querySelector('#screen-2-link').addEventListener('click', function (eve
     });
 });
 
-const body = document.querySelector('body');
-const section2 = document.querySelector('#screen-2');
+var body = document.querySelector('body');
+var section2 = document.querySelector('#screen-2');
 window.addEventListener('scroll', function() {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     if(scrollTop < section2.getBoundingClientRect().top) {
         removeClass(body, 'section-2-background');
         addClass(body, 'section-1-background');
